@@ -2,28 +2,20 @@ import { Reveal } from "./Reveal";
 
 const ingredients = [
   {
-    name: "Hyaluronic Acid",
-    image: "/whates-inside-section/hyaluronic.webp",
+    name: "Rice Water Brightening Complex",
+    image: "/whates-inside-section/rice-water.jpg",
   },
   {
-    name: "Panthenol (B5)",
-    image: "/whates-inside-section/Panthenol.webp",
+    name: "Niacinamide for Even Skin Tone",
+    image: "/whates-inside-section/niacinamide.jpg",
   },
   {
-    name: "Rose Water Extract",
-    image: "/whates-inside-section/rose-water.webp",
+    name: "Azelaic Acid for Spot Reduction",
+    image: "/whates-inside-section/azelaic-acid.jpg",
   },
   {
-    name: "Aloe Vera",
-    image: "/whates-inside-section/Aloe Vera.webp",
-  },
-  {
-    name: "Glycerin",
-    image: "/whates-inside-section/glycerine.webp",
-  },
-  {
-    name: "Ceramides",
-    image: "/whates-inside-section/ceramides.webp",
+    name: "Salicylic Acid for Acne Control",
+    image: "/whates-inside-section/salicylic-acid.jpg",
   },
 ];
 
@@ -54,9 +46,10 @@ export function Ingredients() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Clean 2 x 2 Grid layout (1 column on mobile, 2 columns on tablet & desktop) */}
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 max-w-6xl mx-auto">
           {ingredients.map((item, i) => (
-            <Reveal key={item.name} delay={i * 80}>
+            <Reveal key={item.name} delay={i * 100}>
               <div
                 className="group relative overflow-hidden rounded-3xl border border-border/50 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft"
                 onContextMenu={(event) => event.preventDefault()}
@@ -69,9 +62,9 @@ export function Ingredients() {
                   alt={item.name}
                   draggable={false}
                   loading="lazy"
-                  width={640}
-                  height={480}
-                  className="protected-image block w-full h-auto object-cover pointer-events-none select-none transition-transform duration-500 group-hover:scale-[1.03]"
+                  width={960}
+                  height={640}
+                  className="protected-image block w-full h-auto aspect-[16/10.5] object-cover pointer-events-none select-none transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
             </Reveal>

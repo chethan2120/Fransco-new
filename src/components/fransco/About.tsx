@@ -66,7 +66,7 @@ export function About() {
               <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent blur-xl" />
               <img
                 src={aboutTexture}
-                alt="Fransco luxury skincare texture and formulation"
+                alt="Fransco 4-in-1 Facewash illustration — Texture, Protection, Free From, Ideal For"
                 loading="lazy"
                 width={1080}
                 height={1350}

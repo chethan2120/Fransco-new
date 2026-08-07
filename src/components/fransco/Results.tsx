@@ -1,19 +1,5 @@
 import { Reveal } from "./Reveal";
-
-const results = [
-  {
-    week: "Week 1",
-    image: "/clinical-result/instant-refresh.webp",
-  },
-  {
-    week: "Week 2",
-    image: "/clinical-result/visible glow.webp",
-  },
-  {
-    week: "Week 4",
-    image: "/clinical-result/lasting-result.webp",
-  },
-];
+import realResults from "@/assets/real-results.jpg";
 
 export function Results() {
   return (
@@ -37,39 +23,27 @@ export function Results() {
           <h2 className="mt-5 font-display text-4xl font-semibold sm:text-5xl" style={{ color: "#1D1615" }}>
             Real Results, Real Skin
           </h2>
-          <p className="mt-4" style={{ color: "#8A736D" }}>
-            Based on a 4-week consumer study with verified Fransco users.
-          </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-7 lg:grid-cols-3">
-          {results.map((r, i) => (
-            <Reveal key={r.week} delay={i * 120}>
-              <div
-                className="group relative overflow-hidden rounded-3xl border border-border/50 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft"
-                onContextMenu={(event) => event.preventDefault()}
-                style={{
-                  boxShadow: "0 10px 30px -10px rgba(125,64,71,0.06), 0 4px 12px -4px rgba(46,46,46,0.03)",
-                }}
-              >
-                <img
-                  src={r.image}
-                  alt={r.week}
-                  draggable={false}
-                  loading="lazy"
-                  width={640}
-                  height={640}
-                  className="protected-image block w-full h-auto object-cover pointer-events-none select-none transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal delay={400}>
-          <p className="mt-10 text-center text-xs" style={{ color: "rgba(122,110,102,0.7)" }}>
-            *Based on self-assessment by 120 participants over a 4-week period. Individual results may vary.
-          </p>
+        {/* Single responsive uploaded image */}
+        <Reveal delay={100} className="mt-10 max-w-6xl mx-auto">
+          <div
+            className="relative overflow-hidden rounded-[2rem] border border-border/50 bg-white"
+            onContextMenu={(event) => event.preventDefault()}
+            style={{
+              boxShadow: "0 15px 45px -15px rgba(125,64,71,0.1)",
+            }}
+          >
+            <img
+              src={realResults}
+              alt="Fransco 4-in-1 Facewash Real Results, Real Skin — Clinical Study"
+              draggable={false}
+              loading="lazy"
+              width={1600}
+              height={1000}
+              className="protected-image block w-full h-auto object-contain pointer-events-none select-none"
+            />
+          </div>
         </Reveal>
       </div>
     </section>
