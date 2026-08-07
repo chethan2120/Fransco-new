@@ -6,27 +6,27 @@ const heroSlides = [
   {
     src: "/brand images/hero-1.webp",
     alt: "Fransco 4-in-1 Facewash — Our Best Selling Facewash",
-    mobilePosition: "object-[28%_center] md:object-[32%_center] lg:object-center",
+    mobilePosition: "object-[28%_center] md:object-[32%_center]",
   },
   {
     src: "/brand images/hero-2.webp",
     alt: "Fransco 4-in-1 Facewash — Rice Water Brightening Complex",
-    mobilePosition: "object-[25%_center] md:object-[30%_center] lg:object-center",
+    mobilePosition: "object-[25%_center] md:object-[30%_center]",
   },
   {
     src: "/brand images/hero-3.webp",
     alt: "Fransco 4-in-1 Facewash — Niacinamide for Even Skin Tone",
-    mobilePosition: "object-[25%_center] md:object-[30%_center] lg:object-center",
+    mobilePosition: "object-[25%_center] md:object-[30%_center]",
   },
   {
     src: "/brand images/hero-4.webp",
     alt: "Fransco 4-in-1 Facewash — Azelaic Acid for Spot Reduction",
-    mobilePosition: "object-[24%_center] md:object-[28%_center] lg:object-center",
+    mobilePosition: "object-[24%_center] md:object-[28%_center]",
   },
   {
     src: "/brand images/hero-5.webp",
     alt: "Fransco 4-in-1 Facewash — Salicylic Acid for Acne Control",
-    mobilePosition: "object-[25%_center] md:object-[30%_center] lg:object-center",
+    mobilePosition: "object-[25%_center] md:object-[30%_center]",
   },
 ];
 
@@ -78,14 +78,14 @@ export function Hero() {
       <div className="mx-auto w-full lg:w-[90%] lg:max-w-[1600px]">
         <Reveal className="relative overflow-hidden w-full lg:rounded-[2rem] border border-transparent lg:border-primary/10 shadow-none lg:shadow-soft">
           <div
-            className="group relative w-full min-h-[clamp(420px,70vh,760px)] h-[clamp(420px,70vh,800px)] md:h-[62vh] lg:h-[clamp(480px,75vh,820px)] select-none overflow-hidden"
+            className="group relative w-full h-[clamp(420px,70vh,620px)] md:h-[580px] lg:h-[clamp(680px,78vh,880px)] xl:h-[clamp(720px,82vh,920px)] select-none overflow-hidden bg-[#FAF2EF]/30"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             onContextMenu={(event) => event.preventDefault()}
           >
-            {/* Stacked 5 Hero Banners: responsive object-cover with per-slide focal positioning across mobile, tablet, laptop & desktop */}
+            {/* Stacked 5 Hero Banners: increased height on desktop (700-880px) for 100% full uncropped artwork visibility */}
             {heroSlides.map((slide, index) => {
               const isActive = index === current;
               return (
@@ -104,8 +104,8 @@ export function Hero() {
                     fetchpriority={index === 0 ? "high" : "auto"}
                     width={1920}
                     height={1080}
-                    className={`protected-image block w-full h-full object-cover ${slide.mobilePosition} lg:object-fill pointer-events-none select-none transition-transform duration-[6000ms] ease-out ${
-                      isActive ? "scale-105" : "scale-100"
+                    className={`protected-image block w-full h-full object-cover ${slide.mobilePosition} lg:object-contain lg:object-center pointer-events-none select-none transition-transform duration-[6000ms] ease-out ${
+                      isActive ? "scale-100 md:scale-[1.02]" : "scale-100"
                     }`}
                   />
                 </div>
