@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 const reviews = [
   {
-    name: "Priya R.",
+    name: "Ashwini S.",
     role: "Verified Buyer",
     location: "Mumbai",
     text: "The Fransco 4-in-1 Facewash is an absolute game-changer. My skin feels so fresh, clear, and radiant after every wash — it has become my favourite daily cleanser.",
