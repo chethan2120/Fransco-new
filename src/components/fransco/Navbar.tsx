@@ -197,14 +197,6 @@ export function Navbar() {
             </button>
           )}
           <button
-            aria-label="Account"
-            type="button"
-            className="rounded-full p-2 text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
-            onClick={() => setProfileOpen(true)}
-          >
-            <User className="size-5" />
-          </button>
-          <button
             aria-label="Cart"
             type="button"
             className="rounded-full p-2 text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
