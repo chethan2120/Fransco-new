@@ -91,7 +91,7 @@ export function BestSellers() {
 
             <div className="grid lg:grid-cols-2">
               {/* Image side */}
-              <div className="relative overflow-hidden" style={{ minHeight: "520px" }}>
+              <div className="relative flex items-center justify-center bg-[#FAF2EF]/60 p-6 sm:p-8 lg:p-10" style={{ minHeight: "520px" }}>
                 {/* Best Seller badge */}
                 <div className="absolute left-6 top-6 z-10">
                   <span
@@ -116,10 +116,9 @@ export function BestSellers() {
                   src={product.img}
                   alt={product.name}
                   loading="lazy"
-                  width={1536}
-                  height={1024}
-                  className="h-full w-full object-cover object-[73%_50%] transition-transform duration-700 hover:scale-[1.03]"
-                  style={{ minHeight: "520px" }}
+                  width={1200}
+                  height={1500}
+                  className="max-h-[480px] sm:max-h-[520px] w-auto h-auto object-contain transition-transform duration-700 hover:scale-[1.02]"
                 />
               </div>
 
@@ -218,13 +217,13 @@ export function BestSellers() {
       <Dialog open={detailOpen} onOpenChange={setDetailOpen}>
         <DialogContent className="max-h-[90vh] max-w-5xl overflow-y-auto rounded-[1.75rem] border-border/60 p-0">
           <div className="grid gap-0 lg:grid-cols-[1fr_1.05fr]">
-            <div className="relative overflow-hidden min-h-[380px]">
+            <div className="relative flex items-center justify-center bg-[#FAF2EF]/60 p-6 min-h-[380px]">
               <img
                 src={product.img}
                 alt={product.name}
-                width={1536}
-                height={1024}
-                className="h-full w-full object-cover object-[73%_50%]"
+                width={1200}
+                height={1500}
+                className="max-h-[420px] w-auto h-auto object-contain"
               />
             </div>
             <div className="p-6 lg:p-8">
