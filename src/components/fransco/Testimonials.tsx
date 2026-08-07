@@ -3,14 +3,14 @@ import { Reveal } from "./Reveal";
 
 const reviews = [
   {
-    name: "Aïsha M.",
+    name: "Priya R.",
     role: "Verified Buyer",
     location: "Mumbai",
     text: "The Fransco 4-in-1 Facewash is an absolute game-changer. My skin feels so fresh, clear, and radiant after every wash — it has become my favourite daily cleanser.",
     rating: 5,
   },
   {
-    name: "Camille D.",
+    name: "Ananya S.",
     role: "Verified Buyer",
     location: "Delhi",
     text: "I was skeptical at first but after two weeks my skin feels genuinely smoother and more balanced than ever. Truly a luxurious experience worth every penny.",
